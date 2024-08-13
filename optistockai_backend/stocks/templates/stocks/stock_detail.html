@@ -1,0 +1,13 @@
+<html>
+    <head>
+        <title> Stock Detail</title>
+    </head>
+    <body>
+        <h1>Stock Details for {{stock_data['Meta Data']['2. Symbol']}}</h1>
+        <ul>
+            {% for date, details in stock_data['Time Series (Daily)']. items %}
+            <li>{{date}}: Close - {{details['4. close']}}</li>
+            {% endfor % }
+        </ul>
+    </body>
+</html>
